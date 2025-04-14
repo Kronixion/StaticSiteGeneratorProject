@@ -10,9 +10,9 @@ class HTMLNode:
 
     def props_to_html(self):
         aggregator = ""
-        for prop in props:
-            aggregator += f"{prop}={props[prop]} "
+        for prop in self.props:
+            aggregator += f"{prop}={self.props[prop]}\n"
         return aggregator
 
     def __repr__(self):
-        return f"{self.tag}\n{self.value}\n{self.children}\n{self.props_to_html}"
+        return f"{self.tag}\n{self.value}\n{self.children}\n{self.props_to_html()}"
